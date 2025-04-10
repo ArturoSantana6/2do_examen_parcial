@@ -59,8 +59,8 @@ if buscar and ticker_input:
         })
 
         st.markdown("**Fórmula usada:**")
-        st.latex(r"CAGR = \left(\frac{Precio_{final}}{Precio_{inicial}}\right)^{\frac{1}{n}} - 1")
-ight)^{rac{1}{n}} - 1")
+        st.latex(r"CAGR = \left( \frac{Precio\_{final}}{Precio\_{inicial}} \right)^{\frac{1}{n}} - 1")
+
         st.dataframe(df_cagr)
 
         # Volatilidad histórica
