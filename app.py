@@ -55,12 +55,12 @@ if buscar and ticker_input:
         st.plotly_chart(fig, use_container_width=True)
 
         # Rendimientos CAGR
-st.header("📊 Rendimientos Anualizados (CAGR)")
-cagr_1y = calcular_cagr(hist, 1)
-cagr_3y = calcular_cagr(hist, 3)
-cagr_5y = calcular_cagr(hist, 5)
+        st.header("📊 Rendimientos Anualizados (CAGR)")
+        cagr_1y = calcular_cagr(hist, 1)
+        cagr_3y = calcular_cagr(hist, 3)
+        cagr_5y = calcular_cagr(hist, 5)
 
-df_cagr = pd.DataFrame({
+        df_cagr = pd.DataFrame({
     "Periodo": ["1 año", "3 años", "5 años"],
     "CAGR (%)": [
         f"{c*100:.2f}%" if c is not None else "No disponible"
@@ -68,14 +68,14 @@ df_cagr = pd.DataFrame({
     ]
 })
 
-st.markdown("**Fórmula usada:**")
-st.latex(r"CAGR = \left( \frac{Precio\_{final}}{Precio\_{inicial}} \right)^{\frac{1}{n}} - 1")
-st.dataframe(df_cagr)
+        st.markdown("**Fórmula usada:**")
+        st.latex(r"CAGR = \left( \frac{Precio\_{final}}{Precio\_{inicial}} \right)^{\frac{1}{n}} - 1")
+        st.dataframe(df_cagr)
 
 
-st.markdown("**Fórmula usada:**")
-st.latex(r"CAGR = \left( \frac{Precio\_{final}}{Precio\_{inicial}} \right)^{\frac{1}{n}} - 1")
-st.dataframe(df_cagr)
+        st.markdown("**Fórmula usada:**")
+        st.latex(r"CAGR = \left( \frac{Precio\_{final}}{Precio\_{inicial}} \right)^{\frac{1}{n}} - 1")
+        st.dataframe(df_cagr)
 
 
         # Volatilidad histórica
