@@ -59,7 +59,7 @@ if buscar and ticker_input:
         })
 
         st.markdown("**Fórmula usada:**")
-        st.latex(r"CAGR = \left(rac{Precio_{final}}{Precio_{inicial}}
+        st.latex(r"CAGR = \left(\frac{Precio_{final}}{Precio_{inicial}}\right)^{\frac{1}{n}} - 1")
 ight)^{rac{1}{n}} - 1")
         st.dataframe(df_cagr)
 
