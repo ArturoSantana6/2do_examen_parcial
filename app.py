@@ -24,9 +24,16 @@ def validar_ticker(ticker):
         return False
 
 def calcular_cagr(df, años):
-    final = df["Close"][-1]
-    inicio = df["Close"][-252*años]
-    return (final / inicio) ** (1 / años) - 1
+    try:
+        dias = 252 * años
+        if len(df) < dias:
+            return None
+        final = df["Close"].iloc[-1]
+        inicio = df["Close"].iloc[-dias]
+        return (final / inicio) ** (1 / años) - 1
+    except:
+        return None
+
 
 if buscar and ticker_input:
     if validar_ticker(ticker_input):
